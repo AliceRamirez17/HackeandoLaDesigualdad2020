@@ -20,5 +20,8 @@
   "homepage": "https://github.com/MilagrosRn/HackeandoLaDesigualdad2020#readme",
   "dependencies": {
     "serve": "^11.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4"
   }
 }
