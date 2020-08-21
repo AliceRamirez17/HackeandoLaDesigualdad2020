@@ -1,11 +1,11 @@
 {
-  "name": "HDL2020",
+  "name": "hdl",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "serve src/index.html"
+    "start": "serve "
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/MilagrosRn/HackeandoLaDesigualdad2020#readme",
   "dependencies": {
+    "@babel/core": "^7.11.4",
+    "eslint": "^7.7.0",
+    "sass": "^1.26.10",
     "serve": "^11.3.2"
   }
 }
