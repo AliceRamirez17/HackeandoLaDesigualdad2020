@@ -97,27 +97,72 @@
                         seguroEspacio seguroEspacio seguroEspacio seguro
                     </p>
                     
-
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <input id="date inputDate" type="text" class="datepicker">
-                            <label for="date">Fecha</label>
-                        </div>
-                        <form class="col s12">
+<!-- DOS VISTAS PARA EL FORMULARIO -->
+                    <div class="form-initial">
+                        
+                        <form id="form-data-basic"  class="col s12">
                             <div class="input-field col s6">
-                              <input id="icon_prefix inputName" type="text" class="validate">
-                              <label for="icon_prefix">First Name</label>
+                              <input id="icon_prefix inputName" type="text" class="validate" required>
+                              <label for="icon_prefix">Nombre y Apellidos</label>
                             </div>
                             <div class="input-field col s6">
                               <input id="icon_telephone inputPhone" type="tel" class="validate">
-                              <label for="icon_telephone">Telephone</label>
+                              <label for="icon_telephone">Telefono</label>
                             </div>
+                            <div class="input-field col s12">
+                                <input id="icon_ine inputIne" type="text" class="validate">
+                                <label for="icon_ine">INE</label>
+                              </div>
                             <div class="input-field col s12">
                                 <input id="email inputEmail" type="email" class="validate">
                                 <label for="email">Email</label>
                                 <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
                             </div>
                         </form>
+                      </div>
+                      <div class="form-especific">
+                    
+                          <form id="form-data-choose"  class="col s12">
+
+                         <!-- CLINICA -->
+                          <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>Choose your option</option>
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 3</option>
+                            </select>
+                            <label>Clinica</label>
+                          </div>
+
+                          <!-- FECHA -->
+                        <div class="input-field col s6">
+                            <input id="date inputDate" type="text" class="datepicker">
+                            <label for="date">Fecha</label>
+                        </div>
+
+                        <!-- DOCTOR -->
+                        <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>Elige un medico</option>
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 3</option>
+                            </select>
+                            <label>Medico</label>
+                          </div>
+                          
+                          <!-- ACOMPAÑANTE -->
+                        <div class="check">
+                            <label>
+                                <input id="inputCheck" type="checkbox" />
+                                <span>¿Deseas que te acompañe alguien?</span>
+                              </label>
+                          </div>
+                          
+
+                        </form>
+                          
                       </div>
 
                 </div>
@@ -158,6 +203,10 @@
             var elems = document.querySelectorAll('.datepicker');
             var instances = M.Datepicker.init(elems);
         });
+        document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+  });
     </script>
 
     <script type="module" src="main.js"></script>
