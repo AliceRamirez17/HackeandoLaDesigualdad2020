@@ -6,14 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+    <header>
+        <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#home-section">Espacio seguro</a></li>
+            <li><a href="#espacio-seguro-section">Agenda</a></li>
+            <li><a href="#agenda-section">No estás sola</a></li>
+          </ul>
+        </div> 
+      </nav>
+        <!-- <div class="row">
+            <div class="home-container-options col s12">
+                <div class="">
+                    <ul class="section">
+                        <li><a href="#home-section">Espacio seguro</a></li>
+                        <li><a href="#espacio-seguro-section">Agenda</a></li>
+                        <li><a href="#agenda-section">No estás sola</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+    </header>
+    <section class="landing-body">
+        <div class="row">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            <div class="home-container-scroll  col s9 m8 l10">
+
+                <div id="home-section" class="section scrollspy each-section">
+                   <p>Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio seguroEspacio
+                        seguroEspacio seguro Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio
+                        seguroEspacio seguroEspacio seguroContent Espacio seguro Espacio seguroEspacio seguroEspacio
+                        seguroEspacio seguroEspacio seguroEspacio seguro
+                    </p>
+                    <p>Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio seguroEspacio
+                        seguroEspacio seguro Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio
+                        seguroEspacio seguroEspacio seguroContent Espacio seguro Espacio seguroEspacio seguroEspacio
+                        seguroEspacio seguroEspacio seguroEspacio seguro
+                    </p>
+                    <p>Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio seguroEspacio
+                        seguroEspacio seguro Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio
+                        seguroEspacio seguroEspacio seguroContent Espacio seguro Espacio seguroEspacio seguroEspacio
+                        seguroEspacio seguroEspacio seguroEspacio seguro
+                    </p>
+                </div>
+
+                <div id="espacio-seguro-section" class="section scrollspy">
+                    <div class="row">
+                        <div class="title-description col s6">
+                            <h2></h2>
+                        </div>
+                        <div class="items-description col s6">
+                            <figure class="each-item">
+                                <div class="each-item-icon">
+                                    <img class="icon" src="" alt="">
+                                </div>
+                                <div class="each-item-text">
+                                    <p></p>
+                                </div>
+                            </figure>
+                            <figure class="each-item">
+                                <div class="each-item-icon">
+                                    <img class="icon" src="" alt="">
+                                </div>
+                                <div class="each-item-text">
+                                    <p></p>
+                                </div>
+                            </figure>
+                            <figure class="each-item">
+                                <div class="each-item-icon">
+                                    <img class="icon" src="" alt="">
+                                </div>
+                                <div class="each-item-text">
+                                    <p></p>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="agenda-section" class="row section scrollspy">
+                    <p>Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio seguroEspacio
+                        seguroEspacio seguro Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio
+                        seguroEspacio seguroEspacio seguroContent Espacio seguro Espacio seguroEspacio seguroEspacio
+                        seguroEspacio seguroEspacio seguroEspacio seguro
+                    </p>
+                    
+
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="date inputDate" type="text" class="datepicker">
+                            <label for="date">Fecha</label>
+                        </div>
+                        <form class="col s12">
+                            <div class="input-field col s6">
+                              <input id="icon_prefix inputName" type="text" class="validate">
+                              <label for="icon_prefix">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="icon_telephone inputPhone" type="tel" class="validate">
+                              <label for="icon_telephone">Telephone</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="email inputEmail" type="email" class="validate">
+                                <label for="email">Email</label>
+                                <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                            </div>
+                        </form>
+                      </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-storage.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script>
         // Your web app's Firebase configuration
@@ -30,7 +147,21 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
+
+        //
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.scrollspy');
+            var instances = M.ScrollSpy.init(elems);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.datepicker');
+            var instances = M.Datepicker.init(elems);
+        });
     </script>
+
+    <script type="module" src="main.js"></script>
+    <script type="module" src="config.js"></script>
 </body>
 
 </html>
