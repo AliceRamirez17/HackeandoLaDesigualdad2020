@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./sass/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="css/style.css" />
+    
 </head>
 
 <body>
@@ -89,7 +90,7 @@
                         
                         <form id="form-data-basic"  class="col s12">
                             <div class="input-field col s6">
-                              <input id="icon_prefix inputName" type="text" class="validate" required>
+                              <input id="icon_prefix inputName" type="text" class="validate" >
                               <label for="icon_prefix">Nombre y Apellidos</label>
                             </div>
                             <div class="input-field col s6">
@@ -105,15 +106,16 @@
                                 <label for="email">Email</label>
                                 <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
                             </div>
+                            <button id="btn-continue">Continuar</button>
                         </form>
                       </div>
+
                       <div class="form-especific">
-                    
                           <form id="form-data-choose"  class="col s12">
 
                          <!-- CLINICA -->
                           <div class="input-field col s12">
-                            <select>
+                            <select id="inputClinic">
                               <option value="" disabled selected>Choose your option</option>
                               <option value="1">Option 1</option>
                               <option value="2">Option 2</option>
@@ -130,7 +132,7 @@
 
                         <!-- DOCTOR -->
                         <div class="input-field col s12">
-                            <select>
+                            <select id="inputDoctor">
                               <option value="" disabled selected>Elige un medico</option>
                               <option value="1">Option 1</option>
                               <option value="2">Option 2</option>
@@ -146,7 +148,7 @@
                                 <span>¿Deseas que te acompañe alguien?</span>
                               </label>
                           </div>
-                          
+                          <button id="btn-confirm">Confirmar</button>
 
                         </form>
                           
@@ -158,46 +160,20 @@
         </div>
     </section>
 
-    <!-- <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-storage.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-storage.js"></script> -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script>
-        // // Your web app's Firebase configuration
-        // var firebaseConfig = {
-        //     apiKey: "AIzaSyDQYvhxho00hjo6AlP1o10NXE9VgfARxpM",
-        //     authDomain: "hdlkokoro.firebaseapp.com",
-        //     databaseURL: "https://hdlkokoro.firebaseio.com",
-        //     projectId: "hdlkokoro",
-        //     storageBucket: "hdlkokoro.appspot.com",
-        //     messagingSenderId: "388292856940",
-        //     appId: "1:388292856940:web:f28bbdafb9b0b0bf5d5c49",
-        //     measurementId: "G-E2YCRECKXV"
-        // };
-        // // Initialize Firebase
-        // firebase.initializeApp(firebaseConfig);
-        // firebase.analytics();
-
         //
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.scrollspy');
-            var instances = M.ScrollSpy.init(elems);
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.datepicker');
-            var instances = M.Datepicker.init(elems);
-        });
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('select');
-            var instances = M.FormSelect.init(elems);
-        });
+        document.addEventListener('DOMContentLoaded', () => {
+            M.AutoInit();
+        })
     </script>
-
-    <script type="module" src="./main.js"></script>
-    <script type="module" src="./config.js"></script>
+    <script type="module" src="config.js"></script> 
+    <script src="main.js"></script>
 </body>
 
 </html>
