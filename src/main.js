@@ -1,27 +1,51 @@
 // aqui va todo que tenga que ver con DOM
-console.log('hola');
-
-const btnContinuar =document.getElementById('btn-continue')
-const btnConfirm= document.getElementById('btn-confirm')
 
 
-
+const btnContinuar = document.getElementById('btn-continue')
+const btnConfirm = document.getElementById('btn-confirm')
 const clinic = document.getElementById('inputClinic')
-const dateValue= document.getElementById('inputDate')
 const doctor = document.getElementById('inputDoctor')
-const acomp= document.getElementById('inputCheck')
+const data=[]
 
-let clinicValue=''
 
-btnContinuar.addEventListener('click',()=>{
-  const nameValue= document.getElementById('inputName').value
-const phoneValue= document.getElementById('inputPhone').value
-const ineValue= document.getElementById('inputIne').value
-const emailValue= document.getElementById('inputEmail').value
-console.log(nameValue,phoneValue,ineValue,emailValue);
+btnContinuar.addEventListener('click', () => {
+    const nameValue = document.getElementById('inputName').value
+    const phoneValue = document.getElementById('inputPhone').value
+    const ineValue = document.getElementById('inputIne').value
+    const emailValue = document.getElementById('inputEmail').value
+    
 })
 
-clinic.addEventListener('change',()=>{
-    clinicValue=clinic.value
-    console.log(clinicValue);
+
+let clinicValue=''
+clinic.addEventListener('change', (e) => {
+    e.preventDefault()
+   clinicValue =  clinic.value  
+})
+
+let doctorValue=''
+clinic.addEventListener('change', (e) => {
+    e.preventDefault()
+    doctorValue =  doctor.value  
+})
+
+
+btnConfirm.addEventListener('click', (e) => {
+e.preventDefault()
+
+const dateValue = document.getElementById('inputDate').value
+const acompValue = document.getElementById('inputCheck').checked
+
+if((clinicValue !== undefined) || (doctorValue !== undefined)||(dateValue !== undefined)){
+ console.log(clinicValue);
+ }else {
+  //mostarr "llena este campo"
+  alert('no')
+}
+// if(doctorValue !== undefined){
+    
+// }
+
+
+
 })
