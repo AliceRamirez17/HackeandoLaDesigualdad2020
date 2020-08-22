@@ -7,83 +7,108 @@
     <title>Document</title>
     <link rel="stylesheet" href="./sass/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Logo</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#home-section">Espacio seguro</a></li>
-            <li><a href="#espacio-seguro-section">Agenda</a></li>
-            <li><a href="#agenda-section">No estás sola</a></li>
-          </ul>
-        </div> 
-      </nav>
+        <div class="navbar-fixed">
+            <nav class="white">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">Logo</a>
+                    <ul id="nav-mobile" class="right valign-wrapper">
+                        <li><a href="#espacio-seguro-section">Espacio seguro</a></li>
+                        <li><a href="#no-estas-sola-section">No estás sola</a></li>
+                        <li><a href="#contact-section">Contacto</a></li>
+                    </ul>
+                </div> 
+            </nav>
+        </div>
     </header>
     <section class="landing-body">
         <div class="row">
-            <div class="home-container-scroll  col s9 m8 l10">
-                <div id="home-section" class="section scrollspy each-section">
-                   <p>Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio seguroEspacio
-                        seguroEspacio seguro Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio
-                        seguroEspacio seguroEspacio seguroContent Espacio seguro Espacio seguroEspacio seguroEspacio
-                        seguroEspacio seguroEspacio seguroEspacio seguro
-                    </p>
-                    <p>Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio seguroEspacio
-                        seguroEspacio seguro Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio
-                        seguroEspacio seguroEspacio seguroContent Espacio seguro Espacio seguroEspacio seguroEspacio
-                        seguroEspacio seguroEspacio seguroEspacio seguro
-                    </p>
-                    <p>Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio seguroEspacio
-                        seguroEspacio seguro Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio
-                        seguroEspacio seguroEspacio seguroContent Espacio seguro Espacio seguroEspacio seguroEspacio
-                        seguroEspacio seguroEspacio seguroEspacio seguro
-                    </p>
-                </div>
-
-                <div id="espacio-seguro-section" class="section scrollspy">
-                    <div class="row">
-                        <div class="title-description col s6">
-                            <h2></h2>
-                        </div>
-                        <div class="items-description col s6">
-                            <figure class="each-item">
-                                <div class="each-item-icon">
-                                    <img class="icon" src="" alt="">
-                                </div>
-                                <div class="each-item-text">
-                                    <p></p>
-                                </div>
-                            </figure>
-                            <figure class="each-item">
-                                <div class="each-item-icon">
-                                    <img class="icon" src="" alt="">
-                                </div>
-                                <div class="each-item-text">
-                                    <p></p>
-                                </div>
-                            </figure>
-                            <figure class="each-item">
-                                <div class="each-item-icon">
-                                    <img class="icon" src="" alt="">
-                                </div>
-                                <div class="each-item-text">
-                                    <p></p>
-                                </div>
-                            </figure>
-                        </div>
+            <div class="home-container-scroll">
+                <div id="home-section" class="section scrollspy each-section deep-orange lighten-5 introduccion">
+                    <div class="img-introduccion">
+                        <img class="" src="./img/img-introducción.svg" alt="">
+                    </div>
+                    <div class="text-introduccion">
+                        <p>En (nombre de plataforma) estamos comprometidas contigo,
+                            tenemos el firme propósito de crear una red cada vez más grande
+                            de mujeres empoderadas en cuanto a sus decisiones, basadas en el autoconocimiento
+                            y tranquilidad de un acompañamiento tangible antes, durante y después del proceso que decidas tomar.
+                        </p>
+                        <h6>Tu cuerpo, tu decisión</h6>
+                        <button class="btn-reserva z-depth-1 red lighten-1 white-text"><a href="#agenda-section"></a>Reserva tu cita</button>
                     </div>
                 </div>
-
+                <div id="espacio-seguro-section" class="section scrollspy each-section purple lighten-5">
+                        <div class="espacio-text">
+                            <h5>Espacio seguro</h5>
+                            <p>Texto texto texto texto texto texto texto texto texto texto texto texto texto</p>
+                        </div>
+                        <div class="espacio-menu">
+                            <ul class="collapsible expandable">
+                                <li>
+                                    <div class="collapsible-header">¿Qué es el aborto?</div>
+                                    <div class="collapsible-body">
+                                        <span>
+                                        Entendemos aborto como interrupción del embarazo, cualquiera que sea su causa, antes de que el producto sea viable.
+                                        <br>
+                                        <br>
+                                        En México, la mayor parte de los abortos practicados son clandestinos principalmente por las leyes restrictivas que existen dependiendo la localidad y/o por falta de acceso a la información. Sumado a las anteriores causas y debido a las medidas en contexto con la emergencia sanitaria por COVID-19: restricciones de movilidad, difícil acceso a los servicios de salud e inestabilidad económica por pérdida de empleos.
+                                        <br>
+                                        <br>
+                                        Lo anterior implica que podrían ser inseguros, sin las condiciones ni la información necesarias, poniendo en riesgo tu vida y tu integridad; por ello es tan importante recordarte que no estás sola y que la decisión que tomes debe ser en pleno conocimiento de tu propia salud y las opciones que tengas disponibles.
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header">¿En dónde es legal?</div>
+                                    <div class="collapsible-body">
+                                        <span>
+                                            Existen dos tipos de procedimiento: a través de medicamentos y a través de aspiración manual. Aquí es importante que tengas en cuenta que cualquier opción, depende de tu perfil clínico y del número de semana que tengas.
+                                            <br>
+                                            <br>
+                                            ILE a través de medicamentos
+                                            <br>
+                                            <br>
+                                            Si no han pasado 8 semanas, esta opción puede ser la adecuada para ti ya que no hay riesgo de sangrados abundantes que puedan poner en riesgo tu vida. La OMS recomienda el uso combinado de los medicamentos Mifepristona y Misoprostol porque esta combinación tiene mayor efectividad y menos efectos secundarios. 
+                                            <br>
+                                            <br>
+                                            ILE a través de aspiración manual endouterina AMEU
+                                            <br>
+                                            <br>
+                                            Si ya pasaron 4 semanas y hasta 12, esta opción es segura para ti. Consiste en la extracción del contenido uterino aplicando succión a través de una cánula (tubo delgado) en el cuello uterino. Una AMEU dura en total entre 10 y 15 minutos y se recomienda usar anestesia local o sedación total.
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="collapsible-header">¿Cuáles son mis opciones para ILE?</div>
+                                    <div class="collapsible-body">
+                                        <span>
+                                            En todos los estados de la Republica mexicana, la violación es considerada como causante para interrupción legal del embarazo (ILE) y para otros estados dependiendo el código penal local puede practicarse por distintas causales como salud de la mujer, malformaciones congénitas graves, inseminación artificial no consentida y aborto imprudencial. Puedes consultar esta información a detalle aquí.
+                                            <br>
+                                            <br>
+                                            Unicamente para Ciudad de México y el estado de Oaxaca se permite abortar hasta las doce semanas de gestación, sin importar la causa; en Ciudad de México existe una lista de 13 clínicas de Salud Sexual y Reproductiva que brindan el servicio de interrupción legal del embarazo manera gratuita y, un número más extenso de clínicas privadas aprobadas por la COFEPRIS tanto en Ciudad de México como en el estado de Oaxaca.
+                                            <br>
+                                            <br>
+                                            Te sugerimos que revises muy bien tus opciones y en caso de asistir a una clínica privada corrobores que cuenten con una licencia sanitaria otorgada por COFEPRIS, que las instalaciones sean adecuadas en términos de limpieza y esterilización, pero sobretodo que recibas un primer trato digno que te haga sentir confiada y segura.
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
                 <div id="agenda-section" class="row section scrollspy">
                     <p>Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio seguroEspacio
                         seguroEspacio seguro Content Espacio seguro Espacio seguroEspacio seguroEspacio seguroEspacio
                         seguroEspacio seguroEspacio seguroContent Espacio seguro Espacio seguroEspacio seguroEspacio
                         seguroEspacio seguroEspacio seguroEspacio seguro
                     </p>
+                </div>
                     
 <!-- DOS VISTAS PARA EL FORMULARIO -->
                     <div class="form-initial">
@@ -170,7 +195,11 @@
         //
         document.addEventListener('DOMContentLoaded', () => {
             M.AutoInit();
-        })
+        });
+        var elem = document.querySelector('.collapsible.expandable');
+        var instance = M.Collapsible.init(elem, {
+            accordion: false
+        });
     </script>
     <script type="module" src="config.js"></script> 
     <script src="main.js"></script>
