@@ -114,7 +114,6 @@ btnConfirm.addEventListener('click', (e) => {
 
 const containerInputDoctor = document.getElementById('containerInputDoctor');
 
-
 window.onload = function() {
     containerInputDoctor.classList.add('ocultar');
     acomp.onchange = function() {

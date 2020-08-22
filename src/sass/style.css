@@ -107,7 +107,6 @@ header nav ul a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 100px 0 100px 200px;
   margin: 0;
 }
 .form-initial #form-data-basic button {
@@ -116,8 +115,15 @@ header nav ul a {
   border: none;
 }
 
-.form-especific #form-data-choose {
-  padding: 100px 200px;
+.form-especific .second-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-especific button {
+  width: 240px;
+  height: 50px;
+  border: none;
 }
 
 #agenda-section {

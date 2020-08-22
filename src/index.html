@@ -51,7 +51,7 @@
                         </div>
                         <div class="espacio-menu">
                             <ul class="collapsible expandable">
-                                <li>
+                                <li class="active">
                                     <div class="collapsible-header">¿Qué es el aborto?</div>
                                     <div class="collapsible-body">
                                         <span>
@@ -105,7 +105,8 @@
                 <div id="agenda-section" class="row section scrollspy">
                     <!-- DOS VISTAS PARA EL FORMULARIO -->
                     <div id="form-initial" class="form-initial each-section deep-orange lighten-5">
-                        <div id="form-data-basic"  class="col s6">
+                        <div class="col s2"></div>
+                        <div id="form-data-basic"  class="col s4">
                             <div class="input-field">
                               <input id="inputName" type="text" class="validate" >
                               <label for="inputName">Nombre y Apellidos</label>
@@ -123,63 +124,56 @@
                                 <label for="inputEmail">Email</label>
                                 <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
                             </div>
-                            <button class="red lighten-1" id="btn-continue">Continuar</button>
+                            <button class="red lighten-1 white-text" id="btn-continue">Continuar</button>
                         </div>
                         <div class="col s6"></div>
-                      </div>
+                    </div>
 
-                      <div id="form-especific" class="form-especific each-section deep-orange lighten-5">
+                    <div id="form-especific" class="form-especific each-section deep-orange lighten-5">
+                        <div class="col s2"></div>
+                        <form id="form-data-choose" class="col s6 second-form">
 
-  <!-- Customizable input  -->
-  <!-- <div class="chips">
-    <input class="custom-class">
-  </div> -->
+                            <!-- CLINICA -->
+                            <div class="input-field col s12">
+                                <select id="inputClinic">
+                                    <option value="" disabled selected>Elige una Clinica</option>
+                                    <option value="1">Centro de Salud Beatriz Velasco de Alemán</option>
+                                    <option value="2">Clínica Especializada en la Salud de la Mujer “Marta Lamas”</option>
+                                    <option value="3">Clínica Comunitaria Santa Catarina</option>
+                                </select>
+                                <label>Clinica</label>
+                            </div>
 
+                            <!-- FECHA -->
+                            <div class="input-field col s6">
+                                <input id="inputDate" type="text" class="datepicker">
+                                <label for="inputDate">Fecha</label>
+                            </div>
 
-                          <form id="form-data-choose"  class="col s12">
-
-                         <!-- CLINICA -->
-                          <div class="input-field col s12">
-                            <select id="inputClinic">
-                              <option value="" disabled selected>Elige una Clinica</option>
-                              <option value="1">Centro de Salud Beatriz Velasco de Alemán</option>
-                              <option value="2">Clínica Especializada en la Salud de la Mujer “Marta Lamas”</option>
-                              <option value="3">Clínica Comunitaria Santa Catarina</option>
-                            </select>
-                            <label>Clinica</label>
-                          </div>
-
-                          <!-- FECHA -->
-                        <div class="input-field col s6">
-                            <input id="inputDate" type="text" class="datepicker">
-                            <label for="inputDate">Fecha</label>
-                        </div>
-
-                          <!-- ACOMPAÑANTE -->
-                        <div class="check">
-                            <label>
-                                <input id="inputCheck" type="checkbox" />
-                                <span>¿Deseas que te acompañe alguien?</span>
-                              </label>
-                          </div>
+                            <!-- ACOMPAÑANTE -->
+                            <div class="check">
+                                <label>
+                                    <input id="inputCheck" type="checkbox" />
+                                    <span>¿Deseas que te acompañe alguien?</span>
+                                </label>
+                            </div>
                           
-                          <!-- DOCTOR -->
-                        <div id="containerInputDoctor" class="input-field col s12">
-                            <select id="inputDoctor">
-                              <option value="" disabled selected>Elige un acompañante</option>
-                              <option value="1">Claudia Carmona Juárez</option>
-                              <option value="2">Karen Pérez Collado</option>
-                              <option value="3">Flor Campos Rubio</option>
-                            </select>
-                            <label>Acompañante</label>
-                          </div>
-                          <button id="btn-confirm">Confirmar</button>
-
+                            <!-- DOCTOR -->
+                            <div id="containerInputDoctor" class="input-field col s12">
+                                <select id="inputDoctor">
+                                    <option value="" disabled selected>Elige un acompañante</option>
+                                    <option value="1">Claudia Carmona Juárez</option>
+                                    <option value="2">Karen Pérez Collado</option>
+                                    <option value="3">Flor Campos Rubio</option>
+                                </select>
+                                <label>Acompañante</label>
+                            </div>
+                            <button id="btn-confirm" class="red lighten-1 white-text">Confirmar</button>
                         </form>
+                        <div class="col s4"></div>
                           <div id="resumen" style="width: 150px; background: red;">
                               <h2>Resumen de la cita</h2>
-                              <div id="datos">
-                              </div>
+                              <div id="datos"></div>
                           </div>
                       </div>
                 </div>
