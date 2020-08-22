@@ -17,6 +17,7 @@ const dataResumen = document.getElementById('datos')
 const data = []
 
 formInitial.classList.add('flexbox');
+formEspecific.classList.add('ocultar');
 
 const divData = document.createElement('div')
 
@@ -49,17 +50,19 @@ btnContinue.addEventListener('click', () => {
 
         data.push({ name: nameValue, phone: phoneValue, ine: ineValue, email: emailValue })
         console.log(data);
+        
+        formInitial.classList.add('ocultar');
+        formInitial.classList.remove('flexbox');
+        formEspecific.classList.add('flexbox');
+        formEspecific.classList.remove('ocultar');
     }
-
-    formInitial.classList.add('ocultar');
-    formInitial.classList.remove('flexbox');
 })
 
 let clinicValue = ''
 clinic.addEventListener('change', (e) => {
     e.preventDefault()
     clinicValue = clinic.value
-    divData.innerHTML = ''
+    // divData.innerHTML = ''
     addElementDom('Clinica', clinicValue)
 })
 
@@ -67,7 +70,7 @@ let doctorValue = ''
 doctor.addEventListener('change', (e) => {
     e.preventDefault()
     doctorValue = doctor.value
-    divData.innerHTML = ''
+    // divData.innerHTML = ''
     addElementDom('Acompañante', doctorValue)
 })
 
@@ -75,7 +78,7 @@ let dateValue = ''
 date.addEventListener('change', (e) => {
     e.preventDefault()
     dateValue = date.value
-    divData.innerHTML = ''
+    // divData.innerHTML = ''
     addElementDom('Fecha', dateValue)
 })
 
@@ -84,7 +87,7 @@ acomp.addEventListener('change', (e) => {
     e.preventDefault()
     acompValue = acomp.checked
     const estado = (acompValue) ? 'Si' : 'No';
-    divData.innerHTML = ''
+    // divData.innerHTML = ''
     addElementDom('Con acompañante', estado)
 })
 
@@ -108,3 +111,17 @@ btnConfirm.addEventListener('click', (e) => {
         firebaseFunctions.crearCita(result)
     }
 })
+
+const containerInputDoctor = document.getElementById('containerInputDoctor');
+
+
+window.onload = function() {
+    containerInputDoctor.classList.add('ocultar');
+    acomp.onchange = function() {
+        if (acomp.checked === true) {
+            containerInputDoctor.classList.remove('ocultar');
+        } else {
+            containerInputDoctor.classList.add('ocultar');
+      }
+    }
+  }

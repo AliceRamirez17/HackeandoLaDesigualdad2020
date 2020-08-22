@@ -14,19 +14,21 @@
 
 <body>
     <header>
-        <nav class="white">
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Logo</a>
-                <ul id="nav-mobile" class="right valign-wrapper">
-                    <li><a href="#espacio-seguro-section">Espacio seguro</a></li>
-                    <li><a href="#no-estas-sola-section">No estás sola</a></li>
-                    <li><a href="#contact-section">Contacto</a></li>
-                </ul>
-            </div> 
-        </nav>
+        <div class="navbar-fixed">
+            <nav class="white">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">Logo</a>
+                    <ul id="nav-mobile" class="right valign-wrapper">
+                        <li><a href="#espacio-seguro-section">Espacio seguro</a></li>
+                        <li><a href="#no-estas-sola-section">No estás sola</a></li>
+                        <li><a href="#contact-section">Contacto</a></li>
+                    </ul>
+                </div> 
+            </nav>
+        </div>
     </header>
     <section class="landing-body">
-        <div class="row">
+        <div class="row general">
             <div class="home-container-scroll">
                 <div id="home-section" class="section scrollspy each-section deep-orange lighten-5 introduccion">
                     <div class="img-introduccion">
@@ -39,13 +41,13 @@
                             y tranquilidad de un acompañamiento tangible antes, durante y después del proceso que decidas tomar.
                         </p>
                         <h6>Tu cuerpo, tu decisión</h6>
-                        <button class="btn-reserva z-depth-1 red lighten-1 white-text"><a href="#agenda-section"></a>Reserva tu cita</button>
+                        <button class="btn-reserva red lighten-1"><a class="white-text" href="#agenda-section">Reserva tu cita</a></button>
                     </div>
                 </div>
                 <div id="espacio-seguro-section" class="section scrollspy each-section purple lighten-5">
                         <div class="espacio-text">
                             <h5>Espacio seguro</h5>
-                            <p>Texto texto texto texto texto texto texto texto texto texto texto texto texto</p>
+                            <p>Buscamos bajar la brecha de información disponible de manera general pero efectiva y, en caso de que necesites un acompañamiento mucho más cercano, tenemos disponible para ti el chat en donde puedes conectar con mujeres especialistas interesadas en abordar tus necesidades específicas. </p>
                         </div>
                         <div class="espacio-menu">
                             <ul class="collapsible expandable">
@@ -162,7 +164,7 @@
                           </div>
                           
                           <!-- DOCTOR -->
-                        <div class="input-field col s12 " >
+                        <div id="containerInputDoctor" class="input-field col s12">
                             <select id="inputDoctor">
                               <option value="" disabled selected>Elige un acompañante</option>
                               <option value="1">Claudia Carmona Juárez</option>
@@ -197,10 +199,6 @@
         //
         document.addEventListener('DOMContentLoaded', () => {
             M.AutoInit();
-        });
-        var elem = document.querySelector('.collapsible.expandable');
-        var instance = M.Collapsible.init(elem, {
-            accordion: false
         });
     </script>
     <script type="module" src="config.js"></script> 

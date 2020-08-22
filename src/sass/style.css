@@ -29,6 +29,10 @@ header nav ul a {
   color: black;
 }
 
+.general {
+  margin-bottom: 0 !important;
+}
+
 .each-section {
   width: 100vw;
   height: 100vh !important;
@@ -68,21 +72,32 @@ header nav ul a {
   width: 250px;
   height: 50px;
   border: none;
-  border-radius: 10px;
+  cursor: pointer;
   font-family: "Poppins", sans-serif;
+  text-align: center;
 }
 
-.espacio-seguro {
+#espacio-seguro-section {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 200px;
 }
-.espacio-seguro .espacio-text, .espacio-seguro .espacio-menu {
-  width: 40%;
+#espacio-seguro-section .espacio-menu {
+  width: 55%;
 }
-.espacio-seguro .espacio-text {
+#espacio-seguro-section .espacio-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  width: 40%;
+  height: 40%;
+}
+#espacio-seguro-section .espacio-text h5 {
+  font-family: "Playfair Display", serif;
+}
+#espacio-seguro-section .espacio-text p {
+  font-family: "Poppins", sans-serif;
 }
 
 .form-initial {
@@ -103,6 +118,10 @@ header nav ul a {
 
 .form-especific #form-data-choose {
   padding: 100px 200px;
+}
+
+#agenda-section {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
