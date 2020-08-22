@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    // scroll-behavior: smooth;
 }
 
 .ocultar {
@@ -65,6 +66,7 @@ header {
         }
 
         .img-introduccion {
+            text-align: center;
             img {
                 width: 90%;
             }
@@ -130,6 +132,7 @@ header {
 .form-initial {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 5%;
     padding-left: 7%;
     flex-direction: row;
@@ -154,6 +157,10 @@ header {
             border: none;
             cursor: pointer;
         }
+    }
+
+    img {
+        width: 70%;
     }
 }
 
@@ -180,7 +187,7 @@ header {
        display: flex;
        flex-direction: column;
        align-items: center;
-       height: 50%;
+       height: 43%;
        width: 42% !important;
     background: #F08276;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
@@ -212,8 +219,22 @@ header {
 
 
 
-.no-estas-sola-section {
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
+    img {
+        margin-bottom: 10px;
+    }
+
+    p{
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+.no-estas-sola-section {
     background: #F3E5F5;
     font-family: Poppins;
     text-align: center;
@@ -224,9 +245,13 @@ header {
     margin-bottom: 0 !important;
 
     .center-poster {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        // height: 110vh;
 
         .content-post {
-            height: 110vh;
+            height: 100vh;
 
             h2 {
                 font-family: Playfair Display;
@@ -237,6 +262,10 @@ header {
                 strong {
                     font-weight: 700;
                 }
+            }
+
+            img {
+                height: 60%;
             }
 
             h4 {
@@ -251,7 +280,7 @@ header {
         }
 
         .content-testimonios {
-            // height: 50vh;
+            height: 50vh;
             background: #EFC0BB;
 
             .col {
@@ -271,7 +300,7 @@ header {
 
                 p {
 
-                    font-family: Poppins;
+                    font-family: 'Poppins', sans-serif;
                     font-size: 16px;
                     line-height: 24px;
                     text-align: center;
@@ -284,75 +313,36 @@ header {
     }
 }
 
-footer {
-    background: #F8E8D8;
-
-    .content-acompañamiento {
-        color: #000000;
-        display: flex;
-        justify-content: space-between;
-
-        .redes {
-            width: 40%;
-            margin-left: 5%;
-            .icon {
-                width: 12%; 
-                margin-top: 5%;
-                // img{
-                  
-                // }
-                
-            }
-        }
-
-        .content-text {
-            color:#000000 ;
-            width: 35%;
-            margin-right: 3%;
-            h3 {
-                font-family: Playfair Display;
-                font-size: 24px;
-                line-height: 32px;
-
-            }
-.icon{
-    width: 100%;
-    display: flex;
-    img{
-        width: 8%;
-    }
-h4 {
-                font-family: Poppins;
-                font-size: 14px;
-                line-height: 21px;
-                color: white;
-                a{
-                    color:#000000 ;
-                }
-            }
-        }
-        }
-    }
-}
 .contacto-section{
     width: 100%;
-    height: 20vh;
+    height: 30vh;
     padding-left: 1%;
     padding-right: 1%;
-    h2{
-        font-family: Playfair Display;
-        font-size: 25px;
-        line-height: 40px;
-         text-align: center;
-        color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    .contacto-texto {
+        width: 50%;
     }
     h3{
-        font-family: Poppins;
+        font-family: 'Poppins', sans-serif;
         font-size: 16px;
-        line-height: 24px;
-        text-align: center;
-        margin: 0 !important;
+        line-height: 20px;
         color: #000000;
+        margin: 0 !important;
+        span {
+            font-weight: 600;
+        }
+    }
+    h5{
+        font-family: 'Poppins', sans-serif;
+        font-size: 10px;
+        margin: 5px 0 0 0 !important;
+        color: #000000;
+    }
+    .contacto-acompañamiento{
+        
     }
 }
 @import './mediaQueries'

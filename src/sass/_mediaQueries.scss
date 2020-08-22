@@ -14,7 +14,7 @@
 
         .img-introduccion {
             img {
-                width: 100%;
+                // width: 100%;
             }
         }
     }
@@ -44,7 +44,28 @@
     #agenda-section {
         margin-bottom: 0;
 
-        .form-initial {}
+        .form-initial { 
+            flex-direction: column;
+            align-items: flex-start;
+            // justify-content: space-between;
+            // height: 130vh !important;
+        display: flex;
+        justify-content: center;
+            #form-data-basic {
+                // height: 70%;
+                // margin-bottom: 30px;
+            }
+        
+            .form-initial-img {
+                display: flex;
+        justify-content: center;
+                margin-left: 0 !important;
+                padding-top:  5%;
+            }
+        
+            img {
+                width: 70%;
+            }}
 
         .form-especific {
             // display: flex !important;
@@ -63,14 +84,19 @@
             }
         }
     }
-
+   
     .no-estas-sola-section {
         .center-poster {
             .content-post {
                 height: 80vh;
-                // .content-testimonios {
-                //     }
-                // }
+                
+                img {
+                    width: 90%;
+                    height: 30%;
+                }
+            }
+            .content-testimonios{
+            height: 90vh;
             }
         }
     }
@@ -78,13 +104,11 @@
     footer {
         text-align: center;
         margin-right: 0%;
-
         .redes {
             width: 100% !important;
             margin-left: 0 !important;
         }
-
-        .content-acompañamiento {
+        .contacto-acompañamiento{
             height: 50vh;
             display: block;
 
@@ -94,6 +118,15 @@
                 width: 90%;
                 margin-left: 4%;
             }
+        }
+
+    }
+    .contacto-section{
+        display: flex;
+        flex-direction: column-reverse;
+        .contacto-texto {
+          width: 100%;
+          margin-left: 1%;
         }
     }
 }

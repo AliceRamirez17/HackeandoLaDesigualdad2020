@@ -60,6 +60,7 @@ error.style.color='orange'
             error.textContent= 'se requiere tu email'
     } else {
         error.textContent= ''
+      
     addElementDom('Nombre', nameValue)
     addElementDom('Telefono', phoneValue)
     addElementDom('INE', ineValue)
@@ -68,6 +69,7 @@ error.style.color='orange'
     data.push({ name: nameValue, phone: phoneValue, ine: ineValue, email: emailValue })
     console.log(data);
 
+    console.log(formInitial);
     formInitial.classList.add('ocultar');
     formInitial.classList.remove('flexbox');
     formEspecific.classList.add('flexbox');
