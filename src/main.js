@@ -19,12 +19,26 @@ const data = []
 formInitial.classList.add('flexbox');
 formEspecific.classList.add('ocultar');
 
-const divData = document.createElement('div')
+
 
 const addElementDom = (enunciado, value) => {
-    divData.innerHTML += `
+    const dataFixed = document.getElementById('data-fixed')
+    dataFixed.innerHTML += `
+     <h3>${enunciado}:${value}</h3>
+     `
+    dataResumen.appendChild(dataFixed)
+}
+
+const divData = document.createElement('div')
+const dinamicDom = (enunciado, value) => {
+    const div = document.createElement('div')
+div.innerHTML=''
+    div.innerHTML = `
     <h3>${enunciado}:${value}</h3>
     `
+    
+    // divData.appendChild(div)
+    divData.innerHTML +=div.textContent
     dataResumen.appendChild(divData)
 }
 
@@ -34,36 +48,48 @@ btnContinue.addEventListener('click', () => {
     const ineValue = document.getElementById('inputIne').value
     const emailValue = document.getElementById('inputEmail').value
 
-    if (nameValue === null || nameValue === '') {
-        alert('llena los campos')
-        // } else if (phoneValue === null || phoneValue === '') {
-        //     alert('llena los campos')
-        // } else if (ineValue === null || ineValue === '') {
-        //     alert('llena los campos')
-        //     }else if (emailValue ===null || emailValue ===''){
-        //         alert('llena los campos')
-    } else {
-        addElementDom('Nombre', nameValue)
-        addElementDom('Telefono', phoneValue)
-        addElementDom('INE', ineValue)
-        addElementDom('Email', emailValue)
+    // if (nameValue === null || nameValue === '') {
+    // alert('llena los campos')
+    // } else if (phoneValue === null || phoneValue === '') {
+    //     alert('llena los campos')
+    // } else if (ineValue === null || ineValue === '') {
+    //     alert('llena los campos')
+    //     }else if (emailValue ===null || emailValue ===''){
+    //         alert('llena los campos')
+    // } else {
+    addElementDom('Nombre', nameValue)
+    addElementDom('Telefono', phoneValue)
+    addElementDom('INE', ineValue)
+    addElementDom('Email', emailValue)
 
-        data.push({ name: nameValue, phone: phoneValue, ine: ineValue, email: emailValue })
-        console.log(data);
-        
-        formInitial.classList.add('ocultar');
-        formInitial.classList.remove('flexbox');
-        formEspecific.classList.add('flexbox');
-        formEspecific.classList.remove('ocultar');
-    }
+    data.push({ name: nameValue, phone: phoneValue, ine: ineValue, email: emailValue })
+    console.log(data);
+
+    formInitial.classList.add('ocultar');
+    formInitial.classList.remove('flexbox');
+    formEspecific.classList.add('flexbox');
+    formEspecific.classList.remove('ocultar');
+    // }
 })
 
 let clinicValue = ''
 clinic.addEventListener('change', (e) => {
-    e.preventDefault()
+    
+    
     clinicValue = clinic.value
     // divData.innerHTML = ''
-    addElementDom('Clinica', clinicValue)
+    // dinamicDom('Clinica', clinicValue)
+    const div = document.createElement('div')
+    div.innerHTML=''
+        div.innerHTML = `
+        <h3>'ji':${clinicValue}</h3>
+        `
+        
+        // divData.appendChild(div)
+        divData.innerHTML +=div.textContent;
+        
+        dataResumen.appendChild(divData)
+        dataResumen.innerHTML=''
 })
 
 let doctorValue = ''
@@ -71,56 +97,58 @@ doctor.addEventListener('change', (e) => {
     e.preventDefault()
     doctorValue = doctor.value
     // divData.innerHTML = ''
-    addElementDom('Acompañante', doctorValue)
+    dinamicDom('Acompañante', doctorValue)
+   
 })
 
-let dateValue = ''
-date.addEventListener('change', (e) => {
-    e.preventDefault()
-    dateValue = date.value
-    // divData.innerHTML = ''
-    addElementDom('Fecha', dateValue)
-})
 
-let acompValue = ''
-acomp.addEventListener('change', (e) => {
-    e.preventDefault()
-    acompValue = acomp.checked
-    const estado = (acompValue) ? 'Si' : 'No';
-    // divData.innerHTML = ''
-    addElementDom('Con acompañante', estado)
-})
+// let dateValue = ''
+// date.addEventListener('change', (e) => {
+//     e.preventDefault()
+//     dateValue = date.value
+//     // divData.innerHTML = ''
+//     addElementDom('Fecha', dateValue)
+// })
+
+// let acompValue = ''
+// acomp.addEventListener('change', (e) => {
+//     e.preventDefault()
+//     acompValue = acomp.checked
+//     const estado = (acompValue) ? 'Si' : 'No';
+//     // divData.innerHTML = ''
+//     addElementDom('Con acompañante', estado)
+// })
 
 
 btnConfirm.addEventListener('click', (e) => {
     e.preventDefault()
+    
+    // if (clinicValue === null || clinicValue === '') {
+    //     alert('llena los campos')
+    // } else if (doctorValue === null || doctorValue === '') {
+    //     alert('llena los campos')
+    // } else if (dateValue === null || dateValue === '') {
+    //     alert('llena los campos')
+    // } else {
 
-    if (clinicValue === null || clinicValue === '') {
-        alert('llena los campos')
-    } else if (doctorValue === null || doctorValue === '') {
-        alert('llena los campos')
-    } else if (dateValue === null || dateValue === '') {
-        alert('llena los campos')
-    } else {
+    //     data.push({ clinic: clinicValue, acompPerson: doctorValue, date: dateValue, acomp: acompValue })
+    //     const result = { ...data[0], ...data[1] }
 
-        data.push({ clinic: clinicValue, acompPerson: doctorValue, date: dateValue, acomp: acompValue })
-        const result = { ...data[0], ...data[1] }
+    //     console.log(result);
 
-        console.log(result);
-
-        firebaseFunctions.crearCita(result)
-    }
+    //     firebaseFunctions.crearCita(result)
+    // }
 })
 
 const containerInputDoctor = document.getElementById('containerInputDoctor');
 
-window.onload = function() {
+window.onload = function () {
     containerInputDoctor.classList.add('ocultar');
-    acomp.onchange = function() {
+    acomp.onchange = function () {
         if (acomp.checked === true) {
             containerInputDoctor.classList.remove('ocultar');
         } else {
             containerInputDoctor.classList.add('ocultar');
-      }
+        }
     }
-  }
+}

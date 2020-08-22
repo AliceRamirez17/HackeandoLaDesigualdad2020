@@ -14,10 +14,10 @@
 
 <body>
     <header>
-        <div class="navbar-fixed">
+        <div class="navbar-fixed  hide-on-small-only">
             <nav class="white">
                 <div class="nav-wrapper">
-                    <a href="#" class="brand-logo">Logo</a>
+                    <a href="#" class="brand-logo dark-text ">Logo</a>
                     <ul id="nav-mobile" class="right valign-wrapper">
                         <li><a href="#espacio-seguro-section">Espacio seguro</a></li>
                         <li><a href="#no-estas-sola-section">No estás sola</a></li>
@@ -25,6 +25,21 @@
                     </ul>
                 </div> 
             </nav>
+            
+        </div>
+        <div class="hide-on-large-only ">
+            <nav class="nav-extended rosa oscuro-1">
+                    <div class="nav-wrapper">
+                      <a href="#" class="brand-logo">Logo</a>
+                    </div>
+                    <div class="nav-content">
+                      <ul class="tabs tabs-transparent">
+                        <li class="tab"><a href="#espacio-seguro-section">Espacio seguro</a></li>
+                        <li class="tab"><a class="active" href="#no-estas-sola-section">No estás sola</a></li>
+                        <li class="tab"><a href="#contacto-section">Contacto</a></li>
+                      </ul>
+                    </div>
+                  </nav>
         </div>
     </header>
     <section class="landing-body">
@@ -40,7 +55,7 @@
                             de mujeres empoderadas en cuanto a sus decisiones, basadas en el autoconocimiento
                             y tranquilidad de un acompañamiento tangible antes, durante y después del proceso que decidas tomar.
                         </p>
-                        <h6>Tu cuerpo, tu decisión</h6>
+                        <h5>Tu cuerpo, tu decisión</h5>
                         <button class="btn-reserva red lighten-1"><a class="white-text" href="#agenda-section">Reserva tu cita</a></button>
                     </div>
                 </div>
@@ -50,9 +65,10 @@
                             <p>Buscamos bajar la brecha de información disponible de manera general pero efectiva y, en caso de que necesites un acompañamiento mucho más cercano, tenemos disponible para ti el chat en donde puedes conectar con mujeres especialistas interesadas en abordar tus necesidades específicas. </p>
                         </div>
                         <div class="espacio-menu">
-                            <ul class="collapsible expandable">
+                            <ul class="collapsible popout">
                                 <li class="active">
-                                    <div class="collapsible-header">¿Qué es el aborto?</div>
+                                    <!-- <li> -->
+                                    <div class="collapsible-header ">¿Qué es el aborto?</div>
                                     <div class="collapsible-body">
                                         <span>
                                         Entendemos aborto como interrupción del embarazo, cualquiera que sea su causa, antes de que el producto sea viable.
@@ -65,7 +81,7 @@
                                         </span>
                                     </div>
                                 </li>
-                                <li>
+                                <li >
                                     <div class="collapsible-header">¿En dónde es legal?</div>
                                     <div class="collapsible-body">
                                         <span>
@@ -126,13 +142,13 @@
                             </div>
                             <button class="red lighten-1 white-text" id="btn-continue">Continuar</button>
                         </div>
-                        <div class="col s12 m6">
-
+                        <div class="col s12 m6" style="color: red;">
+<!-- <img src="" alt=""> -->
                         </div>
                       </div>
 
                       <div id="form-especific" class="form-especific deep-orange lighten-5 each-section">
-                          <form id="form-data-choose"  class="col s12">
+                          <form id="form-data-choose "  class="col s12 m6 second-form ">
 
                             <!-- CLINICA -->
                             <div class="input-field col s12">
@@ -169,16 +185,31 @@
                                 </select>
                                 <label>Acompañante</label>
                             </div>
-                            <button id="btn-confirm" class="red lighten-1 white-text">Confirmar</button>
+                           
+  <a class="waves-effect modal-trigger" href="#modal1"> 
+      <button id="btn-confirm" class="red lighten-1 white-text">Confirmar</button>
+</a>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
                         </form>
-                        <div class="col s4"></div>
-                        <div id="resumen" style="width: 150px; background: red;">
+                        
+                        <div id="resumen" class="col s12 m6 resumen" >
                             <h2>Resumen de la cita</h2>
-                            <div id="datos"></div>
+                            <div id="datos">
+                                <div id="data-fixed"></div>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="no-estas-sola-section row section scrollspy ">
+                <div id="no-estas-sola-section" class="no-estas-sola-section row section scrollspy ">
                     <div class="center-poster">
                         <div class="container content-post">
                             <h2><strong>No estas sola:</strong></h2>
@@ -210,6 +241,15 @@
                         
                     </div>
                    
+                </div>
+                <div id="contacto-section" class="contacto-section">
+                    <h2>
+                        Contacto
+                    </h2>
+                    <h3>Muchas gracias por tus comentarios, sugerencias o preguntas. 
+                    </h3> <h3>
+                        Hablemos hola@nombredelaplataforma.com
+                    </h3>
                 </div>
                 <footer>
                         <div class="content-acompañamiento">
@@ -250,11 +290,24 @@
     <script>
         //
         document.addEventListener('DOMContentLoaded', () => {
-            M.AutoInit();
-        });
+            // M.AutoInit();
+       
+
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems);
+  });
+
+
     </script>
     <script type="module" src="config.js"></script> 
     <script type="module" src="main.js"></script>
+    <script src="https://account.snatchbot.me/script.js"></script><script>window.sntchChat.Init(129912)</script> 
 </body>
 
 </html>

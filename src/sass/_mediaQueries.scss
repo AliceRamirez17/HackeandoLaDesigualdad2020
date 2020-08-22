@@ -1,13 +1,40 @@
 
 @media (max-width: 600px) {
 
-.introduccion{
-    display: block; 
+#home-section{
     /* flex-direction: row; */
     /* justify-content: space-evenly; */
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    .img-introduccion,.text-introduccion{
+        width: 100%;
+    }
+    .img-introduccion{
+        img{
+            width: 100%;
+        }
+    }
 }
-
+#espacio-seguro-section{
+    display: flex;
+    flex-direction: column;
+    height: 120vh !important;
+    .espacio-text{
+        width: 90%;
+    }
+    .espacio-menu{
+        width: 90%;
+        
+        .collapsible{
+            .active{
+                .collapsible-body{
+                   padding: 1rem; 
+                }
+            }
+        }
+    }
+}
 
 .no-estas-sola-section {
     .center-poster {
@@ -24,7 +51,8 @@
         text-align: center;
         margin-right: 0%;
         .redes{
-            width: 100%;
+            width: 100%  !important;
+            margin-left: 0 !important;
         }
         .content-acompañamiento{
             height: 50vh;
