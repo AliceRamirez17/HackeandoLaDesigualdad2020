@@ -24,11 +24,11 @@ formEspecific.classList.add('ocultar');
 const addElementDom = (enunciado, value) => {
     const dataFixed = document.getElementById('data-fixed')
     dataFixed.innerHTML += `
-     <h3>${enunciado}:${value}</h3>
+     <h6 class='textAdd' style="font-size: 1em;
+     text-align: center;">${enunciado}:${value}</h6>
      `
     dataResumen.appendChild(dataFixed)
 }
-
 const divData = document.createElement('div')
 const dinamicDom = (enunciado, value) => {
     const div = document.createElement('div')
@@ -47,16 +47,20 @@ btnContinue.addEventListener('click', () => {
     const phoneValue = document.getElementById('inputPhone').value
     const ineValue = document.getElementById('inputIne').value
     const emailValue = document.getElementById('inputEmail').value
-
+const error=document.getElementById('error')
+error.style.margin='5%'
+error.style.color='orange'
     if (nameValue === null || nameValue === '') {
-    alert('llena los campos')
-    } else if (phoneValue === null || phoneValue === '') {
-        alert('llena los campos')
-    } else if (ineValue === null || ineValue === '') {
-        alert('llena los campos')
-        }else if (emailValue ===null || emailValue ===''){
-            alert('llena los campos')
+        error.textContent= 'se requiere tu nombre'
+    } else if (phoneValue === null || phoneValue === '' ) {
+        error.textContent= 'se requiere tu telefono'
+    }  else if (ineValue === null || ineValue === '') {
+        error.textContent= 'se requiere tu INE'
+    } else if (emailValue ===null || emailValue ===''){
+            error.textContent= 'se requiere tu email'
     } else {
+        error.textContent= ''
+      
     addElementDom('Nombre', nameValue)
     addElementDom('Telefono', phoneValue)
     addElementDom('INE', ineValue)
@@ -65,6 +69,7 @@ btnContinue.addEventListener('click', () => {
     data.push({ name: nameValue, phone: phoneValue, ine: ineValue, email: emailValue })
     console.log(data);
 
+    console.log(formInitial);
     formInitial.classList.add('ocultar');
     formInitial.classList.remove('flexbox');
     formEspecific.classList.add('flexbox');
@@ -75,21 +80,10 @@ btnContinue.addEventListener('click', () => {
 let clinicValue = ''
 clinic.addEventListener('change', (e) => {
     
-    
-    clinicValue = clinic.value
-    // divData.innerHTML = ''
-    // dinamicDom('Clinica', clinicValue)
-    const div = document.createElement('div')
-    div.innerHTML=''
-        div.innerHTML = `
-        <h3>'ji':${clinicValue}</h3>
-        `
-        
-        // divData.appendChild(div)
-        divData.innerHTML +=div.textContent;
-        
-        dataResumen.appendChild(divData)
-        dataResumen.innerHTML=''
+        e.preventDefault()
+        clinicValue = clinic.value
+        // divData.innerHTML = ''
+        addElementDom('Clinica', clinicValue)
 })
 
 let doctorValue = ''
@@ -97,47 +91,49 @@ doctor.addEventListener('change', (e) => {
     e.preventDefault()
     doctorValue = doctor.value
     // divData.innerHTML = ''
-    dinamicDom('Acompañante', doctorValue)
+    addElementDom('Acompañante', doctorValue)
    
 })
 
 
-// let dateValue = ''
-// date.addEventListener('change', (e) => {
-//     e.preventDefault()
-//     dateValue = date.value
-//     // divData.innerHTML = ''
-//     addElementDom('Fecha', dateValue)
-// })
+let dateValue = ''
+date.addEventListener('change', (e) => {
+    e.preventDefault()
+    dateValue = date.value
+    // divData.innerHTML = ''
+    addElementDom('Fecha', dateValue)
+})
 
-// let acompValue = ''
-// acomp.addEventListener('change', (e) => {
-//     e.preventDefault()
-//     acompValue = acomp.checked
-//     const estado = (acompValue) ? 'Si' : 'No';
-//     // divData.innerHTML = ''
-//     addElementDom('Con acompañante', estado)
-// })
+let acompValue = ''
+acomp.addEventListener('change', (e) => {
+    e.preventDefault()
+    acompValue = acomp.checked
+    const estado = (acompValue) ? 'Si' : 'No';
+    // divData.innerHTML = ''
+    addElementDom('Con acompañante', estado)
+})
 
 
 btnConfirm.addEventListener('click', (e) => {
     e.preventDefault()
-    
-    // if (clinicValue === null || clinicValue === '') {
-    //     alert('llena los campos')
-    // } else if (doctorValue === null || doctorValue === '') {
-    //     alert('llena los campos')
-    // } else if (dateValue === null || dateValue === '') {
-    //     alert('llena los campos')
-    // } else {
+    const error=document.getElementById('error-message')
+    error.style.margin='5%'
+    error.style.color='orange'
+        
 
-    //     data.push({ clinic: clinicValue, acompPerson: doctorValue, date: dateValue, acomp: acompValue })
-    //     const result = { ...data[0], ...data[1] }
+    if (clinicValue === null || clinicValue === '') {
+        error.textContent= 'se requiere que elijas una clinica'
+    } else if (dateValue === null || dateValue === '') {
+        error.textContent= 'se requiere que elijas una fecha'
+    } else {
+        error.textContent= ''
+        data.push({ clinic: clinicValue, acompPerson: doctorValue, date: dateValue, acomp: acompValue })
+        const result = { ...data[0], ...data[1] }
 
-    //     console.log(result);
+        console.log(result);
 
-    //     firebaseFunctions.crearCita(result)
-    // }
+        firebaseFunctions.crearCita(result)
+    }
 })
 
 const containerInputDoctor = document.getElementById('containerInputDoctor');

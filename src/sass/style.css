@@ -152,29 +152,33 @@ header nav ul a {
   border: none;
   cursor: pointer;
 }
-.form-especific .resumen {
+.form-especific #resumen {
   align-self: center;
-  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 43%;
   width: 42% !important;
   background: #F08276;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
-.form-especific .resumen h2 {
+.form-especific #resumen h2 {
   font-family: Playfair Display;
   font-size: 30px;
   line-height: 40px;
   color: #000000;
   text-align: center;
 }
-.form-especific .resumen h2 .text-dinamic {
-  font-size: 2em;
+.form-especific #resumen #datos #data-fixed {
+  font-family: Playfair Display;
+  font-size: 30px;
+  line-height: 40px;
+  color: #000000;
+  text-align: center;
 }
-.form-especific .resumen a {
-  width: 50%;
-}
-
-#agenda-section {
-  margin-bottom: 0;
+.form-especific #resumen #datos #data-fixed .textAdd {
+  font-size: 16px !important;
+  font-family: "Poppins", sans-serif;
 }
 
 .modal-content {
@@ -229,7 +233,7 @@ header nav ul a {
   border: none;
 }
 .no-estas-sola-section .center-poster .content-testimonios {
-  height: 40vh;
+  height: 50vh;
   background: #EFC0BB;
 }
 .no-estas-sola-section .center-poster .content-testimonios .col {
@@ -289,17 +293,15 @@ header nav ul a {
     display: flex;
     flex-direction: column;
   }
-  #home-section .img-introduccion, #home-section .text-introduccion {
+  #home-section .img-introduccion,
+#home-section .text-introduccion {
     width: 100%;
-  }
-  #home-section .img-introduccion img {
-    width: 60%;
   }
 
   #espacio-seguro-section {
     display: flex;
     flex-direction: column;
-    height: 180vh !important;
+    height: 140vh !important;
   }
   #espacio-seguro-section .espacio-text {
     width: 90%;
@@ -307,29 +309,39 @@ header nav ul a {
   #espacio-seguro-section .espacio-menu {
     width: 90%;
   }
+  #espacio-seguro-section .espacio-menu .collapsible .active .collapsible-body {
+    padding: 1rem;
+  }
 
-  .form-initial {
+  #agenda-section {
+    margin-bottom: 0;
+  }
+  #agenda-section .form-initial {
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
-    height: 130vh !important;
+    display: flex;
+    justify-content: center;
   }
-  .form-initial #form-data-basic {
-    height: 70%;
-  }
-  .form-initial .form-initial-img {
+  #agenda-section .form-initial .form-initial-img {
+    display: flex;
+    justify-content: center;
     margin-left: 0 !important;
-    height: 30%;
+    padding-top: 5%;
   }
-  .form-initial img {
+  #agenda-section .form-initial img {
     width: 70%;
   }
-
-  #form-especific {
-    flex-direction: column;
+  #agenda-section .form-especific {
+    flex-direction: column !important;
   }
-  #form-especific .resumen {
-    margin-left: 0 !important;
+  #agenda-section .form-especific .second-form {
+    margin-top: 9%;
+    margin-bottom: 9%;
+  }
+  #agenda-section .form-especific .resumen {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100% !important;
   }
 
   .no-estas-sola-section .center-poster .content-post {
@@ -338,6 +350,9 @@ header nav ul a {
   .no-estas-sola-section .center-poster .content-post img {
     width: 90%;
     height: 30%;
+  }
+  .no-estas-sola-section .center-poster .content-testimonios {
+    height: 90vh;
   }
 
   footer {
@@ -357,6 +372,15 @@ header nav ul a {
     flex-direction: column;
     width: 90%;
     margin-left: 4%;
+  }
+
+  .contacto-section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .contacto-section .contacto-texto {
+    width: 100%;
+    margin-left: 1%;
   }
 }
 
