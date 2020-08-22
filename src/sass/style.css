@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+.ocultar {
+  display: none;
+}
+
+.flexbox {
+  display: flex;
+}
+
 header .navbar-fixed {
   height: 100px;
 }
@@ -23,7 +31,7 @@ header nav ul a {
 
 .each-section {
   width: 100vw;
-  height: 100vh;
+  height: 100vh !important;
 }
 
 .home-container-scroll .section {
@@ -75,6 +83,26 @@ header nav ul a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.form-initial {
+  flex-direction: row;
+}
+.form-initial #form-data-basic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 0 100px 200px;
+  margin: 0;
+}
+.form-initial #form-data-basic button {
+  width: 240px;
+  height: 50px;
+  border: none;
+}
+
+.form-especific #form-data-choose {
+  padding: 100px 200px;
 }
 
 /*# sourceMappingURL=style.css.map */

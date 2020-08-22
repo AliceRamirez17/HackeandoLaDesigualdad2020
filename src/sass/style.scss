@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+.ocultar {
+    display: none;
+}
+
+.flexbox {
+    display: flex;
+}
+
 header{
     .navbar-fixed{
         height: 100px;
@@ -26,7 +34,7 @@ header{
 
 .each-section{
     width: 100vw;
-    height: 100vh;
+    height: 100vh !important;
 }
 
 .home-container-scroll {
@@ -91,6 +99,26 @@ header{
     }
 }
 
+.form-initial {
+    flex-direction: row;
 
+    #form-data-basic {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 100px 0 100px 200px;
+        margin: 0;
 
+        button {
+            width: 240px;
+            height: 50px;
+            border: none;
+        }
+    }
+}
 
+.form-especific {
+    #form-data-choose {
+        padding: 100px 200px;
+    }
+}
