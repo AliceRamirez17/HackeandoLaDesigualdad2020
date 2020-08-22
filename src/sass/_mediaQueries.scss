@@ -12,11 +12,11 @@
             width: 100%;
         }
 
-        // .img-introduccion {
-        //     img {
-        //         // width: 100%;
-        //     }
-        // }
+        .img-introduccion {
+            img {
+                width: 70%;
+            }
+        }
     }
 
     #espacio-seguro-section {
@@ -64,7 +64,7 @@
             }
         
             img {
-                width: 70%;
+                width: 50%;
             }}
 
         .form-especific {
@@ -81,6 +81,18 @@
                 margin-top: 2%;
                 margin-bottom: 2%;
                 width: 100% !important;
+            }
+
+            #resumen {
+                height: 60%;
+
+                h2 {
+                    font-size: 18px;
+                }
+
+                h6 {
+                    font-size: 12px;
+                }
             }
         }
     }
