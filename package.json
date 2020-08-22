@@ -20,8 +20,10 @@
   "homepage": "https://github.com/MilagrosRn/HackeandoLaDesigualdad2020#readme",
   "dependencies": {
     "@babel/core": "^7.11.4",
-    "eslint": "^7.7.0",
     "sass": "^1.26.10",
     "serve": "^11.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0"
   }
 }
