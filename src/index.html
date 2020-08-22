@@ -122,9 +122,10 @@
                     <!-- DOS VISTAS PARA EL FORMULARIO -->
                     <div id="form-initial" class="form-initial deep-orange lighten-5 each-section">
                         <div id="form-data-basic"  class="col s12 m6">
+                        <form>
                             <h2>Agenda tu cita</h2>
                             <div class="input-field">
-                              <input id="inputName" type="text" class="validate" >
+                              <input id="inputName" type="text" class="validate" name="name">
                               <label for="inputName">Nombre y Apellidos</label>
                             </div>
                             <div class="input-field">
@@ -136,11 +137,12 @@
                                 <label for="inputIne">INE</label>
                               </div>
                             <div class="input-field">
-                                <input id="inputEmail" type="email" class="validate">
+                                <input id="inputEmail" type="email" class="validate" name="email">
                                 <label for="inputEmail">Email</label>
                                 <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
                             </div>
                             <button class="red lighten-1 white-text" id="btn-continue">Continuar</button>
+                        </form>
                         </div>
                         <div class="col s12 m6 form-initial-img">
                             <img src="img/imgCita.svg" alt="">
