@@ -305,6 +305,9 @@ header nav ul a {
 #home-section .text-introduccion {
     width: 100%;
   }
+  #home-section .img-introduccion img {
+    width: 70%;
+  }
 
   #espacio-seguro-section {
     display: flex;
@@ -337,7 +340,7 @@ header nav ul a {
     padding-top: 5%;
   }
   #agenda-section .form-initial img {
-    width: 70%;
+    width: 50%;
   }
   #agenda-section .form-especific {
     flex-direction: column !important;
@@ -350,6 +353,15 @@ header nav ul a {
     margin-top: 2%;
     margin-bottom: 2%;
     width: 100% !important;
+  }
+  #agenda-section .form-especific #resumen {
+    height: 60%;
+  }
+  #agenda-section .form-especific #resumen h2 {
+    font-size: 18px;
+  }
+  #agenda-section .form-especific #resumen h6 {
+    font-size: 12px;
   }
 
   .no-estas-sola-section .center-poster .content-post {
