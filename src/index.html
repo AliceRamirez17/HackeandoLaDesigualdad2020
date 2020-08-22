@@ -47,7 +47,7 @@
             <div class="home-container-scroll">
                 <div id="home-section" class="scrollspy each-section deep-orange lighten-5 introduccion">
                     <div class="img-introduccion s12 m6 ">
-                        <img class="" src="./img/img-introducción.svg" alt="">
+                        <img class="" src="./img/imgHome.svg" alt="">
                     </div>
                     <div class="text-introduccion s12 m6">
                         <p>En (nombre de plataforma) estamos comprometidas contigo,
@@ -120,7 +120,7 @@
                 </div>
                 <div id="agenda-section" class="row scrollspy">
                     <!-- DOS VISTAS PARA EL FORMULARIO -->
-                    <div id="form-initial" class="form-initial deep-orange lighten-5">
+                    <div id="form-initial" class="form-initial deep-orange lighten-5 each-section">
                         <div id="form-data-basic"  class="col s12 m6">
                             <h2>Agenda tu cita</h2>
                             <div class="input-field">
@@ -142,13 +142,13 @@
                             </div>
                             <button class="red lighten-1 white-text" id="btn-continue">Continuar</button>
                         </div>
-                        <div class="col s12 m6" style="color: red;">
-<!-- <img src="" alt=""> -->
+                        <div class="col s12 m6 form-initial-img">
+                            <img src="img/imgCita.svg" alt="">
                         </div>
                       </div>
 
-                      <div id="form-especific" class="form-especific deep-orange lighten-5 each-section">
-                          <form id="form-data-choose "  class="col s12 m6 second-form ">
+                    <div id="form-especific" class="form-especific deep-orange lighten-5 each-section">
+                        <form id="form-data-choose"  class="col s12 m6 second-form">
 
                             <!-- CLINICA -->
                             <div class="input-field col s12">
@@ -186,25 +186,28 @@
                                 <label>Acompañante</label>
                             </div>
                            
-  <a class="waves-effect modal-trigger" href="#modal1"> 
-      <button id="btn-confirm" class="red lighten-1 white-text">Confirmar</button>
-</a>
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
+                            <a class="modal-trigger" href="#modal1"> 
+                                <button id="btn-confirm" class="red lighten-1 white-text">Confirmar</button>
+                            </a>
+                            <!-- Modal Structure -->
+                            <div id="modal1" class="modal white">
+                                <div class="modal-header">
+                                    <a href="#!" class="modal-close btn-flat">x</a>
+                                </div>
+                                <div class="modal-content">
+                                    <img src="img/check.svg" alt="">
+                                    <p class="red accent-1">Tu cita ha quedado confirmada, espera un <br> para el seguimiento de la misma.</p>
+                                </div>
+                                <!-- <div class="modal-footer">
+                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Aceptar</a>
+                                </div> -->
+                            </div>
                         </form>
                         
                         <div id="resumen" class="col s12 m6 resumen" >
                             <h2>Resumen de la cita</h2>
                             <div id="datos">
                                 <div id="data-fixed"></div>
-                                
                             </div>
                         </div>
                     </div>
@@ -242,39 +245,35 @@
                     </div>
                    
                 </div>
-                <div id="contacto-section" class="contacto-section">
-                    <h2>
-                        Contacto
-                    </h2>
-                    <h3>Muchas gracias por tus comentarios, sugerencias o preguntas. 
-                    </h3> <h3>
-                        Hablemos hola@nombredelaplataforma.com
-                    </h3>
-                </div>
-                <footer>
-                        <div class="content-acompañamiento">
-                                <div class="redes">
-                                    <img class="icon" src="./img/iconFB.svg" alt="">
-                                    <img class="icon" src="./img/iconIG.svg" alt="">
-                                    <img class="icon" src="./img/iconWA.svg" alt="">
-                                </div>
-                                <div class="content-text">
-                                    <h3>Acompañamiento</h3>
-                                   <div class="icon">
-                                        <img  src="./img/iconLink.svg" alt="">
-                                        <h4><a href="https://open.spotify.com/episode/6s5n5vko0CUsSKpm7GwvOg?si=KVfRDo3uSAiQoeMtSCeT3A">La maternidad será deseada o no será</a></h4> 
-                                   </div>
-                                   <div class="icon">
-                                        <img  src="./img/iconLink.svg" alt="">
-                                        <h4><a href="https://www.necesitoabortar.mx/derecho-no-delito">Derecho, no delito</a></h4>
-                                   </div>
-                                    <div class="icon">
-                                        <img src="./img/iconLink.svg" alt="">
-                                        <h4><a href="https://www.necesitoabortar.mx/la-aborteria">La abortería</a></h4>
-                                    </div>
-                                </div>
+                <div id="contacto-section" class="contacto-section deep-orange lighten-5">
+                    <div class="contacto-texto">
+                        <h3>Hablemos</h3>
+                        <h3>hola@nombredelaplataforma.com</h3>
+                        <h5>Aviso de privacidad</h5>
+                    </div>
+                    <div class="contacto-acompañamiento">
+                        <div class="redes">
+                            <img class="icon" src="./img/iconFB.svg" alt="">
+                            <img class="icon" src="./img/iconIG.svg" alt="">
+                            <img class="icon" src="./img/iconWA.svg" alt="">
                         </div>
-                   </footer>
+                        <!-- <div class="content-text">
+                            <h3>Acompañamiento</h3>
+                           <div class="icon">
+                                <img  src="./img/iconLink.svg" alt="">
+                                <h4><a href="https://open.spotify.com/episode/6s5n5vko0CUsSKpm7GwvOg?si=KVfRDo3uSAiQoeMtSCeT3A">La maternidad será deseada o no será</a></h4> 
+                           </div>
+                           <div class="icon">
+                                <img  src="./img/iconLink.svg" alt="">
+                                <h4><a href="https://www.necesitoabortar.mx/derecho-no-delito">Derecho, no delito</a></h4>
+                           </div>
+                            <div class="icon">
+                                <img src="./img/iconLink.svg" alt="">
+                                <h4><a href="https://www.necesitoabortar.mx/la-aborteria">La abortería</a></h4>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -289,19 +288,32 @@
 
     <script>
         //
-        document.addEventListener('DOMContentLoaded', () => {
-            // M.AutoInit();
+    //     document.addEventListener('DOMContentLoaded', () => {
+    //         M.AutoInit();
        
 
-  });
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems);
-  });
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems);
-  });
+    // });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.scrollspy');
+        var instances = M.ScrollSpy.init(elems);
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems);
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.datepicker');
+        var instances = M.Datepicker.init(elems);
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.init(elems);
+    });
 
 
     </script>

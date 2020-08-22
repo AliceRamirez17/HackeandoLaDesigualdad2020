@@ -48,15 +48,15 @@ btnContinue.addEventListener('click', () => {
     const ineValue = document.getElementById('inputIne').value
     const emailValue = document.getElementById('inputEmail').value
 
-    // if (nameValue === null || nameValue === '') {
-    // alert('llena los campos')
-    // } else if (phoneValue === null || phoneValue === '') {
-    //     alert('llena los campos')
-    // } else if (ineValue === null || ineValue === '') {
-    //     alert('llena los campos')
-    //     }else if (emailValue ===null || emailValue ===''){
-    //         alert('llena los campos')
-    // } else {
+    if (nameValue === null || nameValue === '') {
+    alert('llena los campos')
+    } else if (phoneValue === null || phoneValue === '') {
+        alert('llena los campos')
+    } else if (ineValue === null || ineValue === '') {
+        alert('llena los campos')
+        }else if (emailValue ===null || emailValue ===''){
+            alert('llena los campos')
+    } else {
     addElementDom('Nombre', nameValue)
     addElementDom('Telefono', phoneValue)
     addElementDom('INE', ineValue)
@@ -69,7 +69,7 @@ btnContinue.addEventListener('click', () => {
     formInitial.classList.remove('flexbox');
     formEspecific.classList.add('flexbox');
     formEspecific.classList.remove('ocultar');
-    // }
+    }
 })
 
 let clinicValue = ''
