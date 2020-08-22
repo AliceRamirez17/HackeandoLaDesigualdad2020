@@ -42,7 +42,8 @@ div.innerHTML=''
     dataResumen.appendChild(divData)
 }
 
-btnContinue.addEventListener('click', () => {
+btnContinue.addEventListener('click', (e) => {
+    e.preventDefault();
     const nameValue = document.getElementById('inputName').value
     const phoneValue = document.getElementById('inputPhone').value
     const ineValue = document.getElementById('inputIne').value

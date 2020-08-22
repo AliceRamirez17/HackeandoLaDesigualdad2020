@@ -18,6 +18,12 @@ header .navbar-fixed {
 header nav {
   height: 100px;
 }
+header nav .brand-logo {
+  color: black;
+  padding-left: 50px;
+  padding-top: 15px;
+  box-sizing: border-box;
+}
 header nav ul {
   width: 40%;
   height: 100%;
@@ -157,7 +163,7 @@ header nav ul a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 43%;
+  height: 55%;
   width: 42% !important;
   background: #F08276;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
