@@ -23,6 +23,8 @@ header nav .brand-logo {
   padding-left: 50px;
   padding-top: 15px;
   box-sizing: border-box;
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
 }
 header nav ul {
   width: 40%;
