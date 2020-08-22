@@ -14,9 +14,9 @@ const crearCita = (data) => {
     ine: data.ine,
     email: data.email,
     clinica: data.clinic,
-    doctor: data.doctor,
+    acompPerson: data.acompPerson,
     fecha: data.date,
-    acompañante: data.acomp,
+    acomp: data.acomp,
 }).then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
 })
