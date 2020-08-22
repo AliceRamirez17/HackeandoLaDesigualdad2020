@@ -16,6 +16,7 @@ const formEspecific = document.getElementById('form-especific')
 const dataResumen = document.getElementById('datos')
 const data = []
 
+formInitial.classList.add('flexbox');
 
 const divData = document.createElement('div')
 
@@ -49,6 +50,9 @@ btnContinue.addEventListener('click', () => {
         data.push({ name: nameValue, phone: phoneValue, ine: ineValue, email: emailValue })
         console.log(data);
     }
+
+    formInitial.classList.add('ocultar');
+    formInitial.classList.remove('flexbox');
 })
 
 let clinicValue = ''
@@ -104,4 +108,3 @@ btnConfirm.addEventListener('click', (e) => {
         firebaseFunctions.crearCita(result)
     }
 })
-
