@@ -206,7 +206,7 @@ header nav ul a {
   flex-direction: column;
 }
 .no-estas-sola-section .center-poster .content-post {
-  height: 70%;
+  height: 100vh;
 }
 .no-estas-sola-section .center-poster .content-post h2 {
   font-family: Playfair Display;
@@ -229,7 +229,7 @@ header nav ul a {
   border: none;
 }
 .no-estas-sola-section .center-poster .content-testimonios {
-  height: 30%;
+  height: 40vh;
   background: #EFC0BB;
 }
 .no-estas-sola-section .center-poster .content-testimonios .col {
@@ -259,21 +259,25 @@ header nav ul a {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
 }
 .contacto-section .contacto-texto {
   width: 50%;
 }
-.contacto-section h2 {
-  font-family: "Poppins", sans-serif;
-  font-size: 25px;
-  line-height: 40px;
-  color: #000000;
-}
 .contacto-section h3 {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 20px;
+  color: #000000;
   margin: 0 !important;
+}
+.contacto-section h3 span {
+  font-weight: 600;
+}
+.contacto-section h5 {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  margin: 5px 0 0 0 !important;
   color: #000000;
 }
 
@@ -312,7 +316,6 @@ header nav ul a {
   }
   .form-initial #form-data-basic {
     height: 70%;
-    margin-bottom: 30px;
   }
   .form-initial .form-initial-img {
     margin-left: 0 !important;
@@ -322,8 +325,15 @@ header nav ul a {
     width: 70%;
   }
 
+  #form-especific {
+    flex-direction: column;
+  }
+  #form-especific .resumen {
+    margin-left: 0 !important;
+  }
+
   .no-estas-sola-section .center-poster .content-post {
-    height: 70%;
+    height: 80vh;
   }
   .no-estas-sola-section .center-poster .content-post img {
     width: 90%;

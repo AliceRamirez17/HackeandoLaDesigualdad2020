@@ -187,16 +187,16 @@ header {
        width: 42% !important;
     background: #F08276;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-    h2{
-        font-family: Playfair Display;
-        font-size: 30px;
-        line-height: 40px;
-        color: #000000;   
-        text-align: center;
-        .text-dinamic{
-            font-size: 2em;
+        h2{
+            font-family: Playfair Display;
+            font-size: 30px;
+            line-height: 40px;
+            color: #000000;   
+            text-align: center;
+            .text-dinamic{
+                font-size: 2em;
+            }
         }
-    }
     a{
         width: 50%;
     }
@@ -239,7 +239,7 @@ header {
         // height: 150vh;
 
         .content-post {
-            height: 70%;
+            height: 100vh;
 
             h2 {
                 font-family: Playfair Display;
@@ -268,7 +268,7 @@ header {
         }
 
         .content-testimonios {
-            height: 30%;
+            height: 40vh;
             background: #EFC0BB;
 
             .col {
@@ -309,22 +309,27 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
 
     .contacto-texto {
         width: 50%;
     }
 
-    h2{
-        font-family: 'Poppins', sans-serif;
-        font-size: 25px;
-        line-height: 40px;
-        color: #000000;
-    }
     h3{
         font-family: 'Poppins', sans-serif;
         font-size: 16px;
-        line-height: 24px;
+        line-height: 20px;
+        color: #000000;
         margin: 0 !important;
+
+        span {
+            font-weight: 600;
+        }
+    }
+    h5{
+        font-family: 'Poppins', sans-serif;
+        font-size: 10px;
+        margin: 5px 0 0 0 !important;
         color: #000000;
     }
 }
