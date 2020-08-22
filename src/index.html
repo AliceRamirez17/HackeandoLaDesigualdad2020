@@ -111,61 +111,57 @@
                 </div>
                     
 <!-- DOS VISTAS PARA EL FORMULARIO -->
-                    <div class="form-initial">
+                    <div id="form-initial" class="form-initial">
                         
-                        <form id="form-data-basic"  class="col s12">
+                        <div id="form-data-basic"  class="col s12">
                             <div class="input-field col s6">
-                              <input id="icon_prefix inputName" type="text" class="validate" >
-                              <label for="icon_prefix">Nombre y Apellidos</label>
+                              <input id="inputName" type="text" class="validate" >
+                              <label for="inputName">Nombre y Apellidos</label>
                             </div>
                             <div class="input-field col s6">
-                              <input id="icon_telephone inputPhone" type="tel" class="validate">
-                              <label for="icon_telephone">Telefono</label>
+                              <input id="inputPhone" type="tel" class="validate">
+                              <label for="inputPhone">Telefono</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="icon_ine inputIne" type="text" class="validate">
-                                <label for="icon_ine">INE</label>
+                                <input id="inputIne" type="text" class="validate">
+                                <label for="inputIne">INE</label>
                               </div>
                             <div class="input-field col s12">
-                                <input id="email inputEmail" type="email" class="validate">
-                                <label for="email">Email</label>
+                                <input id="inputEmail" type="email" class="validate">
+                                <label for="inputEmail">Email</label>
                                 <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
                             </div>
                             <button id="btn-continue">Continuar</button>
-                        </form>
+                        </div>
                       </div>
 
-                      <div class="form-especific">
+                      <div id="form-especific" class="form-especific">
+
+  <!-- Customizable input  -->
+  <!-- <div class="chips">
+    <input class="custom-class">
+  </div> -->
+
+
                           <form id="form-data-choose"  class="col s12">
 
                          <!-- CLINICA -->
                           <div class="input-field col s12">
                             <select id="inputClinic">
-                              <option value="" disabled selected>Choose your option</option>
-                              <option value="1">Option 1</option>
-                              <option value="2">Option 2</option>
-                              <option value="3">Option 3</option>
+                              <option value="" disabled selected>Elige una Clinica</option>
+                              <option value="1">Centro de Salud Beatriz Velasco de Alemán</option>
+                              <option value="2">Clínica Especializada en la Salud de la Mujer “Marta Lamas”</option>
+                              <option value="3">Clínica Comunitaria Santa Catarina</option>
                             </select>
                             <label>Clinica</label>
                           </div>
 
                           <!-- FECHA -->
                         <div class="input-field col s6">
-                            <input id="date inputDate" type="text" class="datepicker">
-                            <label for="date">Fecha</label>
+                            <input id="inputDate" type="text" class="datepicker">
+                            <label for="inputDate">Fecha</label>
                         </div>
 
-                        <!-- DOCTOR -->
-                        <div class="input-field col s12">
-                            <select id="inputDoctor">
-                              <option value="" disabled selected>Elige un medico</option>
-                              <option value="1">Option 1</option>
-                              <option value="2">Option 2</option>
-                              <option value="3">Option 3</option>
-                            </select>
-                            <label>Medico</label>
-                          </div>
-                          
                           <!-- ACOMPAÑANTE -->
                         <div class="check">
                             <label>
@@ -173,21 +169,38 @@
                                 <span>¿Deseas que te acompañe alguien?</span>
                               </label>
                           </div>
+                          
+                          <!-- DOCTOR -->
+                        <div class="input-field col s12">
+                            <select id="inputDoctor">
+                              <option value="" disabled selected>Elige un acompañante</option>
+                              <option value="1">Claudia Carmona Juárez</option>
+                              <option value="2">Karen Pérez Collado</option>
+                              <option value="3">Flor Campos Rubio</option>
+                            </select>
+                            <label>Acompañante</label>
+                          </div>
                           <button id="btn-confirm">Confirmar</button>
 
                         </form>
-                          
+                          <div id="resumen" style="width: 150px; background: red;">
+                              <h2>Resumen de la cita</h2>
+                              <div id="datos">
+                              </div>
+                          </div>
                       </div>
 
                 </div>
             </div>
 
         </div>
+
+
     </section>
 
     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
-    <!-- <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-storage.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-storage.js"></script>
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
@@ -202,7 +215,7 @@
         });
     </script>
     <script type="module" src="config.js"></script> 
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>
