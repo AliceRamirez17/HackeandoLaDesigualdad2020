@@ -11,6 +11,7 @@
     display: flex;
 }
 
+
 header {
     .navbar-fixed {
         height: 100px;
@@ -174,8 +175,11 @@ header {
     }
     }
 
-   .resumen{
+   #resumen{
        align-self: center;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
        height: 50%;
        width: 42% !important;
     background: #F08276;
@@ -186,19 +190,27 @@ header {
         line-height: 40px;
         color: #000000;   
         text-align: center;
-        .text-dinamic{
-            font-size: 2em;
-        }
     }
-    a{
-        width: 50%;
+    #datos{
+        
+        #data-fixed{
+            font-family: Playfair Display;
+        font-size: 30px;
+        line-height: 40px;
+        color: #000000;   
+        text-align: center;
+        .textAdd{
+   
+            font-size: 16px !important;
+            font-family: 'Poppins', sans-serif;
+        
+    }
+        }
     }
    }
 }
 
-#agenda-section {
-    margin-bottom: 0;
-}
+
 
 .no-estas-sola-section {
 

@@ -18,7 +18,8 @@ const crearCita = (data) => {
     fecha: data.date,
     acomp: data.acomp,
 }).then(function(docRef) {
-    console.log("Document written with ID: ", docRef.id);
+    const modalShow= document.getElementById('modalShow') 
+    modalShow.href="#modal1"
 })
 }
 

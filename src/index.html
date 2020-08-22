@@ -123,23 +123,27 @@
                     <div id="form-initial" class="form-initial deep-orange lighten-5">
                         <div id="form-data-basic"  class="col s12 m6">
                             <h2>Agenda tu cita</h2>
-                            <div class="input-field">
-                              <input id="inputName" type="text" class="validate" >
-                              <label for="inputName">Nombre y Apellidos</label>
-                            </div>
-                            <div class="input-field">
-                              <input id="inputPhone" type="tel" class="validate">
-                              <label for="inputPhone">Telefono</label>
-                            </div>
-                            <div class="input-field">
-                                <input id="inputIne" type="text" class="validate">
-                                <label for="inputIne">INE</label>
-                              </div>
-                            <div class="input-field">
-                                <input id="inputEmail" type="email" class="validate">
-                                <label for="inputEmail">Email</label>
-                                <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
-                            </div>
+                            <form  action="enviar.php" 
+                            method="POST">
+                                <div class="input-field">
+                                  <input name='name' id="inputName" type="text" class="validate" required>
+                                  <label for="inputName">Nombre y Apellidos</label>
+                                </div>
+                                <div class="input-field">
+                                  <input name='phone'  id="inputPhone" type="tel" class="validate" required>
+                                  <label for="inputPhone">Telefono</label>
+                                </div>
+                                <div class="input-field">
+                                    <input name='message' id="inputIne" type="text" class="validate" required>
+                                    <label for="inputIne">INE</label>
+                                  </div>
+                                <div class="input-field">
+                                    <input name='mail' id="inputEmail" type="email" class="validate" required>
+                                    <label for="inputEmail">Email</label>
+                                    <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                                </div>
+                            </form>
+                            <p id="error"></p>
                             <button class="red lighten-1 white-text" id="btn-continue">Continuar</button>
                         </div>
                         <div class="col s12 m6" style="color: red;">
@@ -148,45 +152,45 @@
                       </div>
 
                       <div id="form-especific" class="form-especific deep-orange lighten-5 each-section">
-                          <form id="form-data-choose "  class="col s12 m6 second-form ">
+                          <form id="form-data-choose"  class="col s12 m6 second-form ">
 
                             <!-- CLINICA -->
                             <div class="input-field col s12">
-                                <select id="inputClinic">
+                                <select name="clinica"id="inputClinic">
                                     <option value="" disabled selected>Elige una Clinica</option>
-                                    <option value="1">Centro de Salud Beatriz Velasco de Alemán</option>
-                                    <option value="2">Clínica Especializada en la Salud de la Mujer “Marta Lamas”</option>
-                                    <option value="3">Clínica Comunitaria Santa Catarina</option>
+                                    <option  value="CS. Beatriz Velasco de Alemán">Centro de Salud Beatriz Velasco de Alemán</option>
+                                    <option value="Clínica Especializada en la Salud de la Mujer “Marta Lamas”">Clínica Especializada en la Salud de la Mujer “Marta Lamas”</option>
+                                    <option value="Clínica Comunitaria Santa Catarina">Clínica Comunitaria Santa Catarina</option>
                                 </select>
                                 <label>Clinica</label>
                             </div>
 
                             <!-- FECHA -->
                             <div class="input-field col s12">
-                                <input id="inputDate" type="text" class="datepicker">
+                                <input name="fecha" id="inputDate" type="text" class="datepicker">
                                 <label for="inputDate">Fecha</label>
                             </div>
 
                             <!-- ACOMPAÑANTE -->
                             <div class="check">
                                 <label>
-                                    <input id="inputCheck" type="checkbox" />
+                                    <input name="acomp" id="inputCheck" type="checkbox" />
                                     <span>¿Deseas que te acompañe alguien?</span>
                                 </label>
                             </div>
                           
                             <!-- DOCTOR -->
                             <div id="containerInputDoctor" class="input-field col s12">
-                                <select id="inputDoctor">
+                                <select name="acompPerson" id="inputDoctor">
                                     <option value="" disabled selected>Elige un acompañante</option>
-                                    <option value="1">Claudia Carmona Juárez</option>
-                                    <option value="2">Karen Pérez Collado</option>
-                                    <option value="3">Flor Campos Rubio</option>
+                                    <option value="Claudia Carmona Juárez">Claudia Carmona Juárez</option>
+                                    <option value="Karen Pérez Collado">Karen Pérez Collado</option>
+                                    <option value="Flor Campos Rubio">Flor Campos Rubio</option>
                                 </select>
                                 <label>Acompañante</label>
                             </div>
-                           
-  <a class="waves-effect modal-trigger" href="#modal1"> 
+                            <p id="error-message"></p>
+  <a class="waves-effect modal-trigger"  id="modalShow"> 
       <button id="btn-confirm" class="red lighten-1 white-text">Confirmar</button>
 </a>
   <!-- Modal Structure -->
@@ -290,7 +294,7 @@
     <script>
         //
         document.addEventListener('DOMContentLoaded', () => {
-            // M.AutoInit();
+            M.AutoInit();
        
 
   });
