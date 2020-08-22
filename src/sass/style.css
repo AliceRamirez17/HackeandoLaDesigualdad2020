@@ -109,10 +109,11 @@ header nav ul a {
   justify-content: center;
   margin: 0;
 }
-.form-initial #form-data-basic button {
+.form-initial #form-data-basic #btn-continue {
   width: 240px;
   height: 50px;
   border: none;
+  cursor: pointer;
 }
 
 .form-especific .second-form {
@@ -120,10 +121,11 @@ header nav ul a {
   flex-direction: column;
   justify-content: center;
 }
-.form-especific button {
+.form-especific #btn-confirm {
   width: 240px;
   height: 50px;
   border: none;
+  cursor: pointer;
 }
 
 #agenda-section {
